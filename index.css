@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+    border: 3 solid black;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.logo{
+    width: 210px;
+    height: 100px;
+    padding: 10px;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.navigation-items{
+    list-style: none;
+    display: flex;
+    padding: 15px;
+}
+
+.navigation-items > li{
+    margin: 10px;
+}
+
+.body{
+    height:10px;
+}
+
+.rest-picture{
+    height:90px;
+    width: 240px; 
+    padding: 10px;
+}
+
+.search-bar{
+    padding: 9px;
+    margin: 10px;
+}
+
+.footer{
+    margin: 500px 10px;
+    background-color: cadetblue;
+}
+
+.rest-card{
+    margin: 8.5px;
+    height: 300px;
+    width: 260px;
+    background-color: palevioletred;
+    padding-left: 5px;
+}
+
+.restaurants-container{
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.rest-card:hover{
+    border: 3px solid black;
+    cursor: pointer;
+}
