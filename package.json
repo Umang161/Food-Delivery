@@ -1,29 +1,30 @@
 {
-  "name": "react",
+  "name": "food-delivery",
   "version": "1.0.0",
-  "description": "\"This is a React App\"",
+  "description": "Food Delivery WebApp",
   "main": "App.js",
   "scripts": {
-    "test": "jest",
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Umang161/ReactCourse.git"
+    "url": "git+https://github.com/Umang161/Food-Delivery.git"
   },
+  "keywords": [
+    "Food-Delivery"
+  ],
   "author": "Umang Agarwal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Umang161/ReactCourse/issues"
+    "url": "https://github.com/Umang161/Food-Delivery/issues"
   },
-  "homepage": "https://github.com/Umang161/ReactCourse#readme",
-  "devDependencies": {
-    "parcel": "^2.9.3",
-    "process": "^0.11.10"
-  },
+  "homepage": "https://github.com/Umang161/Food-Delivery#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   }
 }
