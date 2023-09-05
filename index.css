@@ -66,3 +66,16 @@
 .topRated:hover{
     cursor: pointer;
 }
+
+.shimmerCard{
+    margin: 8.5px;
+    height: 300px;
+    width: 260px;
+    background-color: #f0f0f0;
+}
+
+.shimmer_card_container{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
