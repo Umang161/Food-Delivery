@@ -1,10 +1,10 @@
 import {RestaurantCard} from "./RestaurantCard"
-import {restaurantsList} from "../utils/mock-data"
 import { useEffect, useState } from "react"
 import { SWIGGY_LIVE_API } from "../utils/constants"
+import Shimmer from "./Shimmer"
 
-export const Body = () => {
-    let [restaurantData, setRestaurantData] = useState(restaurantsList);
+const Body = () => {
+    let [restaurantData, setRestaurantData] = useState([]);
 
     const fetchData = async () => {
         const liveData = await fetch(SWIGGY_LIVE_API);
@@ -13,6 +13,12 @@ export const Body = () => {
     }
 
     useEffect(() => {fetchData()},[]);
+
+    //Conditional Rendering.
+    if(restaurantData.length === 0){
+        console.log("Shimmer UI Rendered")
+        return <Shimmer />;
+    }
 
     return(
         <div className="body">
@@ -33,3 +39,5 @@ export const Body = () => {
         </div>  
     )
 }
+
+export default Body;
