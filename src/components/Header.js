@@ -1,6 +1,9 @@
+import { useState } from "react"
 import { LOGO_LINK } from "../utils/constants"
 
 export const Header = () => {
+    const [LogButton, setLogButton] = useState("Login");
+
     return (
         <div className="header">
             <img className="logo" src={LOGO_LINK}/>
@@ -12,6 +15,12 @@ export const Header = () => {
                     <li>My Profile</li>
                 </ul>
             </div>
+            <button className="logButton" onClick={()=>
+            {
+                LogButton === "Login"
+                ? setLogButton("Logout")
+                : setLogButton("Login");
+            }}>{LogButton}</button>
         </div>      
     )    
 }
