@@ -79,3 +79,14 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.logButton:hover{
+    cursor: pointer;
+}
+
+.logButton{
+    margin:40px;
+    margin-left:1px;
+    height: 20px;
+    width: 60px;
+}
