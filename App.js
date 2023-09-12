@@ -6,6 +6,7 @@ import About from "./src/components/About"
 import Contact from "./src/components/Contact"
 import Error from "./src/components/Error"
 import Cart from "./src/components/Cart"
+import RestaurantMenu from "./src/components/RestaurantMenu"
 
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom"
 
@@ -38,7 +39,14 @@ const appRouter = createBrowserRouter([
         {
             path:"/cart",
             element:<Cart />
-        }  
+        },
+        {
+            //This resid will be passed to component using route prop.
+            //We need not to manually pass this as a prop.
+            //We can get that prop in component using useParams() hook.
+            path:"/restaurantmenu/:resid",
+            element:<RestaurantMenu />
+        }
         ],
         errorElement:<Error />
     }   

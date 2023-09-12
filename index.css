@@ -102,3 +102,22 @@
     display: flex;
     margin-top: 10px;
 }
+
+.itemCard{
+    height: 350px;
+    width: 200px;
+    border: black;
+    background-color: #f0f0f0;
+    margin:15px;
+}
+
+.itemCardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemPic{
+    width:180px;
+    padding: 10px;
+    height: 200px;
+}
