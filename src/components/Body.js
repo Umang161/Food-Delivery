@@ -11,14 +11,14 @@ const Body = () => {
     const fetchData = async () => {
         const liveData = await fetch(SWIGGY_LIVE_API);
         const liveDataJSON = await liveData.json();
-        setRestaurantData(liveDataJSON?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredList(liveDataJSON?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestaurantData(liveDataJSON?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredList(liveDataJSON?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
     useEffect(() => {fetchData()},[]);
 
     //Conditional Rendering.
-    if(restaurantData.length === 0){
+    if(restaurantData?.length === 0){
         return <Shimmer />;
     }
 
@@ -32,7 +32,7 @@ const Body = () => {
                     <button className="seachButton" onClick={()=>{
                         const foundRestaurants = restaurantData.filter((res)=>
                         {
-                            if(res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+                            if(res?.info?.name.toLowerCase().includes(searchText.toLowerCase()))
                                 return res;
                         })
                         setFilteredList(foundRestaurants);
@@ -47,7 +47,7 @@ const Body = () => {
             </div>
             <div className="restaurants-container">
                 {filteredList.map((restaurant) => {
-                    return <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                    return <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
                 })} 
             </div>
         </div>  

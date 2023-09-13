@@ -11,17 +11,17 @@ const RestaurantMenu = ()=> {
     useEffect(()=>{
         fetch(MENU_LINK+resid).
         then((response)=>{return menuDataJSON = response.json();}).
-        then((jsonData) => {setItemList(jsonData.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards)
+        then((jsonData) => {setItemList(jsonData?.data?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[2]?.card?.card?.itemCards)
     })
     },[resid]);
 
-    if(itemList.length === 0)
+    if(itemList?.length === 0)
         return <Shimmer/>;
 
     return (
         <div className="itemCardsContainer">
-           {itemList.map((item)=>{
-                return <ItemCard key={item.card.info.id} itemInfo={item.card.info}/>
+           {itemList?.map((item)=>{
+                return <ItemCard key={item?.card?.info?.id} itemInfo={item?.card?.info}/>
            })}
         </div>
     )
